@@ -1,133 +1,142 @@
+/* ===== Nkamo's Oven Updated CSS Style ===== */
+
 body {
-
-font-family: Arial, sans-serif;
-
-color: #333;
-
-background-color: #f9f9f9;
-
-margin: 0;
-
-padding: 0;
-
-line-height: 1.6;
-
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #4a2c2a;
+  background-color: #fefaf5;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
 }
 
-
+/* Header */
 header {
-
-background-color: #4CAF50;
-
-color: white;
-
-padding: 20px;
-
-text-align: center;
-
+  background-color: #8B4513;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
-
 
 header h1 {
-
-margin: 0;
-
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
 }
 
+/* Navigation Bar */
+nav {
+  background-color: #a0522d;
+  padding: 10px 0;
+  text-align: center;
+}
 
 nav a {
-
-color: white;
-
-text-decoration: none;
-
-margin: 0 10px;
-
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin: 0 15px;
+  transition: color 0.3s;
 }
-
 
 nav a:hover {
-
-text-decoration: underline;
-
+  color: #ffcc80;
+  text-decoration: underline;
 }
 
+/* Main Section */
 main {
-
-padding: 20px;
-
-max-width: 800px;
-
-margin: 0 auto;
-
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff8e1;
+  border-radius: 8px;
 }
-
 
 main img {
-
-max-width: 100%;
-
-height: auto;
-
-display: block;
-
-margin: 20px 0;
-
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 5px solid #8B4513;
+  border-radius: 12px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
 }
 
+/* Footer */
 footer {
-
-background-color: #333;
-
-color: white;
-
-text-align: center;
-
-padding: 10px;
-
-position: fixed;
-
-bottom: 0;
-
-width: 100%;
-
+  background-color: #3e2723;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95em;
+  margin-top: 40px;
 }
 
-
+/* Text Styling */
 p {
-
-font-size: 1.1em;
-
+  font-size: 1.1em;
+  margin-bottom: 1em;
 }
 
-
-a {
-
-color: #4CAF50;
-
-text-decoration: none;
-
+h2, h3, h4 {
+  color: #6d4c41;
 }
 
-
-a:hover {
-
-text-decoration: underline;
-
+/* Buttons */
+.btn {
+  background-color: #8B4513;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background-color 0.3s;
 }
 
+.btn:hover {
+  background-color: #a0522d;
+}
+
+/* Email links */
+main a[href^="mailto"] {
+  color: #d84315;
+  font-weight: bold;
+}
+
+/* Image Styling */
 img {
-
-border: 5px solid #4CAF50;
-
-border-radius: 10px;
-
+  border: 4px solid #d7ccc8;
+  border-radius: 10px;
 }
 
-main a[href^="mailto:"] {
-
-color: #ff5722;
-
-font-weight: bold;
-
+/* Form fields */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: 'Poppins', Arial, sans-serif;
 }
+
+label {
+  font-weight: 600;
+  color: #5d4037;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Responsive Enhancements */
+@media screen and (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 20px;
+  }
+
