@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Nkamo's Oven</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Nkamo's Oven Logo" height="50"> Nkamo's Oven
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h2 class="text-center"> Our Delicious Menu </h2>
+
+    <!-- Product: Vanilla Cake -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img id="vanilla-cake-img" src="images/vanilla-cake.jpg" class="img-fluid rounded shadow" alt="Classic Vanilla Cake">
+      </div>
+      <div class="col-md-6">
+        <h4>Classic Vanilla Cake </h4>
+        <p>Moist vanilla sponge layered with velvety buttercream. Choose your favorite style below:</p>
+        <select id="vanillaOptions" class="form-select mb-2" onchange="document.getElementById('vanilla-cake-img').src = 'images/' + this.value.split(' - ')[0].replace(/ /g, '-').toLowerCase() + '.jpg'">
+          <option value="Classic Vanilla - P250.00">Classic Vanilla - P250.00</option>
+          <option value="Vanilla with Fruit - P270.00">Vanilla with Fruit - P270.00</option>
+          <option value="Double-Layer Vanilla - P300.00">Double-Layer Vanilla - P300.00</option>
+          <option value="Gluten-Free Vanilla - P280.00">Gluten-Free Vanilla - P280.00</option>
+        </select>
+        <a href="#" onclick="orderNow('Vanilla Cake', 'vanillaOptions')" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Product: Buttercream Cake -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img id="butter-img" src="images/buttercream-cake.jpg" class="img-fluid rounded shadow" alt="Buttercream Cake">
+      </div>
+      <div class="col-md-6">
+        <h4>Buttercream Cake </h4>
+        <p>Golden sponge wrapped in silky buttercream. Select your style below:</p>
+        <select id="butterOptions" class="form-select mb-2" onchange="document.getElementById('butter-img').src = 'images/' + this.value.split(' - ')[0].replace(/ /g, '-').toLowerCase() + '.jpg'">
+          <option value="Classic Buttercream - P300.00">Classic Buttercream - P300.00</option>
+          <option value="Chocolate Buttercream - P320.00">Chocolate Buttercream - P320.00</option>
+          <option value="Fruit-Topped Buttercream - P340.00">Fruit-Topped Buttercream - P340.00</option>
+        </select>
+        <a href="#" onclick="orderNow('Buttercream Cake', 'butterOptions')" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Product: Red Velvet -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img id="velvet-img" src="images/red-velvet.jpg" class="img-fluid rounded shadow" alt="Red Velvet Cake">
+      </div>
+      <div class="col-md-6">
+        <h4>Red Velvet Cake </h4>
+        <p>Moist, elegant and bold red velvet choices below:</p>
+        <select id="velvetOptions" class="form-select mb-2" onchange="document.getElementById('velvet-img').src = 'images/' + this.value.split(' - ')[0].replace(/ /g, '-').toLowerCase() + '.jpg'">
+          <option value="Classic Red Velvet - P280.00">Classic Red Velvet - P280.00</option>
+          <option value="Mini Red Velvet - P150.00">Mini Red Velvet - P150.00</option>
+          <option value="Heart-Shaped Red Velvet - P320.00">Heart-Shaped Red Velvet - P320.00</option>
+        </select>
+        <a href="#" onclick="orderNow('Red Velvet Cake', 'velvetOptions')" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Product: Vanilla Cupcakes -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img id="cupcake-img" src="images/cupcakes.jpg" class="img-fluid rounded shadow" alt="Vanilla Cupcakes">
+      </div>
+      <div class="col-md-6">
+        <h4>Vanilla Cupcakes </h4>
+        <p>Choose your cupcake style for any celebration:</p>
+        <select id="cupcakeOptions" class="form-select mb-2" onchange="document.getElementById('cupcake-img').src = 'images/' + this.value.split(' - ')[0].replace(/ /g, '-').toLowerCase() + '.jpg'">
+          <option value="Plain Vanilla Cupcakes - P15.00 each">Plain Vanilla Cupcakes - P15.00 each</option>
+          <option value="Decorated Cupcakes - P20.00 each">Decorated Cupcakes - P20.00 each</option>
+          <option value="Custom-Design Cupcakes - P25.00 each">Custom-Design Cupcakes - P25.00 each</option>
+        </select>
+        <a href="#" onclick="orderNow('Vanilla Cupcakes', 'cupcakeOptions')" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Product: Peanut Butter Cookies -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img id="cookie-img" src="images/peanut-cookies.jpg" class="img-fluid rounded shadow" alt="Peanut Butter Cookies">
+      </div>
+      <div class="col-md-6">
+        <h4>Peanut Butter Cookies </h4>
+        <p>Soft, nutty cookies made fresh daily. Choose your type:</p>
+        <select id="cookieOptions" class="form-select mb-2" onchange="document.getElementById('cookie-img').src = 'images/' + this.value.split(' - ')[0].replace(/ /g, '-').toLowerCase() + '.jpg'">
+          <option value="Classic PB Cookie - P5.00">Classic PB Cookie - P5.00</option>
+          <option value="PB with Choc Chips - P6.00">PB with Choc Chips - P6.00</option>
+          <option value="Mini Peanut Cookies - P4.00">Mini Peanut Cookies - P4.00</option>
+        </select>
+        <a href="#" onclick="orderNow('Peanut Butter Cookies', 'cookieOptions')" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center p-3 bg-dark text-white">
+    <p>&copy; 2025 Nkamo's Oven. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function orderNow(product, selectId) {
+      const choice = document.getElementById(selectId).value;
+      const fullProduct = `${product} - ${choice}`;
+      window.location.href = `order.html?product=${encodeURIComponent(fullProduct)}`;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
